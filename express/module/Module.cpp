@@ -454,7 +454,11 @@ Module* Module::cloneBaseTo(CloneContext* ctx, Module* module) const {
     return module;
 }
 
-Module* Module::extract(std::vector<Express::VARP> inputs, std::vector<Express::VARP> outputs, bool fortrain, const std::map<std::string, SubGraph>& subGraph) {
+// Module* Module::extract(std::vector<Express::VARP> inputs, std::vector<Express::VARP> outputs, bool fortrain, const std::map<std::string, SubGraph>& subGraph) {
+//     return new PipelineModule(inputs, outputs);
+// }
+
+Module* Module::extract(std::vector<Express::VARP> inputs, std::vector<Express::VARP> outputs, bool fortrain) {
     return new PipelineModule(inputs, outputs);
 }
 

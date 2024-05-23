@@ -12,6 +12,9 @@
 #include <stdint.h>
 #include <stdio.h>
 #include "core/Macro.h"
+#if defined(__QNX__)
+#include <unistd.h>
+#endif
 #ifdef __cplusplus
 extern "C" {
 #endif

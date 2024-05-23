@@ -16,11 +16,9 @@ cd ${build_dir}
 
 rm -rf *
 
-cmake	-DBUILD_BASE_UTILS_LIB_TEST=ON														\
-		-DBUILD_WITH_EASY_PROFILER=ON														\
-		-DCMAKE_GENERATOR="Unix Makefiles"													\
-		-DCMAKE_TOOLCHAIN_FILE=${project_root_path}/cmake/aarch64_qnx700.toolchain.cmake	\
-		-DCMAKE_BUILD_TYPE=${build_type}													\
+cmake	-DCMAKE_GENERATOR="Unix Makefiles"														\
+		-DCMAKE_TOOLCHAIN_FILE=${project_root_path}/cmake_add/aarch64_qnx700.toolchain.cmake	\
+		-DCMAKE_BUILD_TYPE=${build_type}														\
 		${project_root_path}
 make -j4
 
